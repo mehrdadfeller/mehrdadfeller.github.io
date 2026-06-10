@@ -1,0 +1,45 @@
+---
+// Replace the bio copy and headshot below.
+---
+
+<section id="about" class="section">
+  <div class="container about">
+    <div class="about__photo">
+      <img src="/images/headshot.svg" alt="Portrait of Mehrdad Feller" loading="lazy" />
+    </div>
+    <div class="about__text">
+      <p class="eyebrow">About</p>
+      <h2>A bit about me</h2>
+      <p class="lead">
+        Write a short bio here — your background, what you care about, and the
+        thread that connects your engineering and academic work.
+      </p>
+      <p>
+        Add a second paragraph with more detail: where you studied or worked, the
+        domains you focus on, and what you're exploring now. Keep it personal and
+        concrete.
+      </p>
+    </div>
+  </div>
+</section>
+
+<style>
+  .about {
+    display: grid;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: start;
+  }
+  @media (min-width: 760px) {
+    .about {
+      grid-template-columns: 4fr 7fr;
+    }
+  }
+  .about__photo img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--hairline);
+    background: var(--surface);
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+  }
+</style>

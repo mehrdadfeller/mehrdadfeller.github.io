@@ -1,0 +1,82 @@
+---
+import { getCollection } from 'astro:content';
+
+const publications = (await getCollection('publications')).sort(
+  (a, b) => b.data.year - a.data.year,
+);
+---
+
+<section id="publications" class="section">
+  <div class="container">
+    <p class="eyebrow">Academic Work</p>
+    <h2>Publications</h2>
+
+    <ol class="pubs">
+      {publications.map((pub) => (
+        <li class="pub">
+          <div class="pub__year">{pub.data.year}</div>
+          <div class="pub__detail">
+            <h3 class="pub__title">{pub.data.title}</h3>
+            <p class="pub__meta">
+              {pub.data.authors} — <em>{pub.data.venue}</em>
+              {pub.data.type && <span class="pub__type">{pub.data.type}</span>}
+            </p>
+            <div class="pub__links">
+              {pub.data.links.pdf && <a href={pub.data.links.pdf}>PDF</a>}
+              {pub.data.links.doi && <a href={pub.data.links.doi}>DOI</a>}
+              {pub.data.links.arxiv && <a href={pub.data.links.arxiv}>arXiv</a>}
+            </div>
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .pubs {
+    list-style: none;
+    margin: 2.5rem 0 0;
+    padding: 0;
+  }
+  .pub {
+    display: grid;
+    gap: 0.35rem 2rem;
+    padding-block: 1.5rem;
+    border-top: 1px solid var(--hairline);
+  }
+  @media (min-width: 700px) {
+    .pub {
+      grid-template-columns: 5rem 1fr;
+    }
+  }
+  .pub__year {
+    font-family: var(--font-serif);
+    font-size: var(--step-1);
+    color: var(--muted);
+  }
+  .pub__title {
+    font-size: var(--step-1);
+    margin-bottom: 0.3rem;
+  }
+  .pub__meta {
+    color: var(--ink-soft);
+    margin: 0;
+  }
+  .pub__type {
+    display: inline-block;
+    margin-left: 0.5rem;
+    font-size: var(--step--1);
+    color: var(--accent);
+    background: var(--accent-soft);
+    padding: 0.1em 0.6em;
+    border-radius: 999px;
+  }
+  .pub__links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.6rem;
+    font-size: var(--step--1);
+    font-weight: 600;
+  }
+</style>

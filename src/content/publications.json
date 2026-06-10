@@ -1,0 +1,25 @@
+[
+  {
+    "id": "placeholder-2021",
+    "title": "Title of Your Publication Goes Here",
+    "authors": "M. Feller, A. Coauthor, B. Coauthor",
+    "venue": "Proceedings of the Example Conference (EXAMPLE '21)",
+    "year": 2021,
+    "type": "Conference Paper",
+    "links": {
+      "pdf": "https://example.com/paper.pdf",
+      "doi": "https://doi.org/10.0000/example"
+    }
+  },
+  {
+    "id": "placeholder-2019",
+    "title": "Another Publication Title — Replace With Real Work",
+    "authors": "M. Feller, C. Coauthor",
+    "venue": "Journal of Example Studies, Vol. 12",
+    "year": 2019,
+    "type": "Journal Article",
+    "links": {
+      "arxiv": "https://arxiv.org/abs/0000.00000"
+    }
+  }
+]

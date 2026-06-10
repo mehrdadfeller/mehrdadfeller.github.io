@@ -1,0 +1,20 @@
+[
+  {
+    "id": "talk-keynote",
+    "title": "Title of Your Talk or Keynote",
+    "event": "Example Conference 2022",
+    "year": 2022,
+    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+    "thumbnail": "/images/talks/placeholder.svg",
+    "description": "A short description of what the talk covered and why it mattered."
+  },
+  {
+    "id": "talk-panel",
+    "title": "Panel: An Example Discussion",
+    "event": "Example Summit 2020",
+    "year": 2020,
+    "videoUrl": "https://vimeo.com/000000000",
+    "thumbnail": "/images/talks/placeholder.svg",
+    "description": "Replace with the real talk. Thumbnails live in public/images/talks/."
+  }
+]

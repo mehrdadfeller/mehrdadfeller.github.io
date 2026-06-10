@@ -1,0 +1,92 @@
+---
+import { render } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+interface Props {
+  project: CollectionEntry<'projects'>;
+  index: number;
+}
+
+const { project, index } = Astro.props;
+const { data } = project;
+const { Content } = await render(project);
+const reversed = index % 2 === 1;
+---
+
+<article class:list={['project', { 'project--reversed': reversed }]}>
+  {data.heroImage && (
+    <div class="project__media">
+      <img src={data.heroImage} alt={`${data.title} project image`} loading="lazy" />
+    </div>
+  )}
+  <div class="project__body">
+    <p class="eyebrow">{data.role} · {data.period}</p>
+    <h3>{data.title}</h3>
+    <p class="lead project__summary">{data.summary}</p>
+
+    <div class="project__prose">
+      <Content />
+    </div>
+
+    {data.tags.length > 0 && (
+      <ul class="project__tags">
+        {data.tags.map((t) => <li class="tag">{t}</li>)}
+      </ul>
+    )}
+
+    {(data.links.live || data.links.repo || data.links.demo) && (
+      <div class="project__links">
+        {data.links.live && <a href={data.links.live} class="button">Visit site →</a>}
+        {data.links.repo && <a href={data.links.repo} class="button">Source →</a>}
+        {data.links.demo && <a href={data.links.demo} class="button">Demo →</a>}
+      </div>
+    )}
+  </div>
+</article>
+
+<style>
+  .project {
+    display: grid;
+    gap: clamp(1.5rem, 4vw, 3rem);
+    align-items: start;
+    padding-block: clamp(2.5rem, 5vw, 4rem);
+  }
+  .project + .project {
+    border-top: 1px solid var(--hairline);
+  }
+  @media (min-width: 800px) {
+    .project {
+      grid-template-columns: 5fr 6fr;
+    }
+    .project--reversed .project__media {
+      order: 2;
+    }
+  }
+  .project__media img {
+    width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--hairline);
+    background: var(--surface);
+  }
+  .project__summary {
+    margin-block: 0.75rem 1.25rem;
+  }
+  .project__prose {
+    color: var(--ink-soft);
+    max-width: var(--measure);
+  }
+  .project__tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    list-style: none;
+    margin: 1.5rem 0 0;
+    padding: 0;
+  }
+  .project__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+</style>

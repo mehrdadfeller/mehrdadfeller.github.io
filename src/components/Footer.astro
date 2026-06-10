@@ -1,0 +1,55 @@
+---
+const email = 'accounts@getubo.com';
+const socials = [
+  { label: 'GitHub', href: 'https://github.com/mehrdadfeller' },
+  { label: 'LinkedIn', href: 'https://www.linkedin.com/' },
+  { label: 'Ubo', href: 'https://getubo.com' },
+];
+const year = 2026;
+---
+
+<section id="contact" class="section footer">
+  <div class="container">
+    <p class="eyebrow">Contact</p>
+    <h2 class="footer__headline">Let's talk.</h2>
+    <p class="lead">
+      The best way to reach me is by email. I'm always happy to talk about
+      hardware, open source, and research.
+    </p>
+    <p class="footer__email">
+      <a href={`mailto:${email}`}>{email}</a>
+    </p>
+
+    <div class="footer__links">
+      {socials.map((s) => (
+        <a href={s.href} target="_blank" rel="noopener">{s.label}</a>
+      ))}
+      <a href="/cv.pdf">CV (PDF)</a>
+    </div>
+
+    <p class="footer__fine">© {year} Mehrdad Feller. Built with Astro.</p>
+  </div>
+</section>
+
+<style>
+  .footer__headline {
+    margin-bottom: 0.5rem;
+  }
+  .footer__email {
+    font-family: var(--font-serif);
+    font-size: var(--step-2);
+    margin: 1.5rem 0 2rem;
+  }
+  .footer__links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    font-weight: 600;
+    font-size: var(--step--1);
+  }
+  .footer__fine {
+    margin-top: 3rem;
+    color: var(--muted);
+    font-size: var(--step--1);
+  }
+</style>

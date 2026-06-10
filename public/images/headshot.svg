@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-label="Headshot placeholder">
+  <rect width="800" height="1000" fill="#f0ede6"/>
+  <circle cx="400" cy="400" r="150" fill="#d8d2c6"/>
+  <path d="M180 880 C180 660 620 660 620 880 Z" fill="#d8d2c6"/>
+  <text x="50%" y="94%" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" fill="#6b6b6b">Your photo</text>
+</svg>
