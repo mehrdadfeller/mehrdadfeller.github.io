@@ -25,4 +25,5 @@ npm run preview  # preview the production build
 ## Deploy
 
 Pushing to `main` triggers `.github/workflows/deploy.yml`, which builds and
-publishes to GitHub Pages at https://mehrdadfeller.github.io.
+publishes to GitHub Pages, served at https://mehrdadmajzoobi.com
+(custom domain bound via `public/CNAME`).
