@@ -12,7 +12,8 @@ const projects = defineCollection({
     period: z.string(),
     summary: z.string(),
     tags: z.array(z.string()).default([]),
-    heroImage: z.string().optional(),
+    // One or more images shown in a carousel. First image is the cover.
+    images: z.array(z.string()).default([]),
     links: z
       .object({
         live: z.string().url().optional(),
@@ -34,6 +35,7 @@ const publications = defineCollection({
     authors: z.string(),
     venue: z.string(),
     year: z.number(),
+    citations: z.number().optional(),
     type: z.string().optional(),
     links: z
       .object({

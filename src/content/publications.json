@@ -1,25 +1,56 @@
 [
   {
-    "id": "placeholder-2021",
-    "title": "Title of Your Publication Goes Here",
-    "authors": "M. Feller, A. Coauthor, B. Coauthor",
-    "venue": "Proceedings of the Example Conference (EXAMPLE '21)",
-    "year": 2021,
-    "type": "Conference Paper",
-    "links": {
-      "pdf": "https://example.com/paper.pdf",
-      "doi": "https://doi.org/10.0000/example"
-    }
+    "id": "lightweight-secure-pufs-2008",
+    "title": "Lightweight Secure PUFs",
+    "authors": "M. Majzoobi, F. Koushanfar, M. Potkonjak",
+    "venue": "IEEE/ACM International Conference on Computer-Aided Design (ICCAD)",
+    "year": 2008,
+    "citations": 486,
+    "type": "Conference Paper"
   },
   {
-    "id": "placeholder-2019",
-    "title": "Another Publication Title — Replace With Real Work",
-    "authors": "M. Feller, C. Coauthor",
-    "venue": "Journal of Example Studies, Vol. 12",
-    "year": 2019,
-    "type": "Journal Article",
-    "links": {
-      "arxiv": "https://arxiv.org/abs/0000.00000"
-    }
+    "id": "slender-puf-2012",
+    "title": "Slender PUF Protocol: A Lightweight, Robust, and Secure Authentication by Substring Matching",
+    "authors": "M. Majzoobi, M. Rostami, F. Koushanfar, D. S. Wallach, S. Devadas",
+    "venue": "IEEE Symposium on Security and Privacy Workshops",
+    "year": 2012,
+    "citations": 316,
+    "type": "Conference Paper"
+  },
+  {
+    "id": "testing-techniques-hw-security-2008",
+    "title": "Testing Techniques for Hardware Security",
+    "authors": "M. Majzoobi, F. Koushanfar, M. Potkonjak",
+    "venue": "IEEE International Test Conference (ITC)",
+    "year": 2008,
+    "citations": 293,
+    "type": "Conference Paper"
+  },
+  {
+    "id": "secure-reconfigurable-pufs-2009",
+    "title": "Techniques for Design and Implementation of Secure Reconfigurable PUFs",
+    "authors": "M. Majzoobi, F. Koushanfar, M. Potkonjak",
+    "venue": "ACM Transactions on Reconfigurable Technology and Systems (TRETS)",
+    "year": 2009,
+    "citations": 287,
+    "type": "Journal Article"
+  },
+  {
+    "id": "fpga-puf-delay-lines-2010",
+    "title": "FPGA PUF Using Programmable Delay Lines",
+    "authors": "M. Majzoobi, F. Koushanfar, S. Devadas",
+    "venue": "IEEE International Workshop on Information Forensics and Security (WIFS)",
+    "year": 2010,
+    "citations": 261,
+    "type": "Conference Paper"
+  },
+  {
+    "id": "fpga-trng-metastability-2011",
+    "title": "FPGA-Based True Random Number Generation Using Circuit Metastability with Adaptive Feedback Control",
+    "authors": "M. Majzoobi, F. Koushanfar, S. Devadas",
+    "venue": "Cryptographic Hardware and Embedded Systems (CHES)",
+    "year": 2011,
+    "citations": 230,
+    "type": "Conference Paper"
   }
 ]

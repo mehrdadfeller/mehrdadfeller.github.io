@@ -4,7 +4,9 @@ role: "Your Role"
 period: "20XX — 20XX"
 summary: "A one-line description of the project — what it was, who it was for, and why it mattered."
 tags: ["Tag One", "Tag Two", "Tag Three"]
-heroImage: "/images/projects/placeholder.svg"
+images:
+  - "/images/projects/placeholder-1.svg"
+  - "/images/projects/placeholder-2.svg"
 links:
   live: "https://example.com"
 order: 2

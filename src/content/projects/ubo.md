@@ -4,7 +4,10 @@ role: "Founder & Lead Engineer"
 period: "2021 — Present"
 summary: "An open-source, modular smart assistant pod — privacy-first hardware and software built on a Raspberry Pi platform."
 tags: ["Hardware", "Open Source", "Embedded Linux", "Python"]
-heroImage: "/images/projects/ubo.svg"
+images:
+  - "/images/projects/ubo-1.svg"
+  - "/images/projects/ubo-2.svg"
+  - "/images/projects/ubo-3.svg"
 links:
   live: "https://getubo.com"
   repo: "https://github.com/ubopod"
