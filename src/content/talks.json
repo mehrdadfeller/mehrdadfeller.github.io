@@ -1,20 +1,29 @@
 [
   {
-    "id": "talk-keynote",
-    "title": "Title of Your Talk or Keynote",
-    "event": "Example Conference 2022",
-    "year": 2022,
-    "videoUrl": "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-    "thumbnail": "/images/talks/placeholder.svg",
-    "description": "A short description of what the talk covered and why it mattered."
+    "id": "futo-open-hardware-2025",
+    "title": "Building an Open, Modular, and Hackable Hardware",
+    "event": "FUTO",
+    "year": 2025,
+    "videoUrl": "https://www.youtube.com/watch?v=I9lse_YdSpQ",
+    "thumbnail": "/images/talks/futo-open-hardware.jpg",
+    "description": "The design philosophy and engineering behind Ubo — an open, modular, and hackable hardware platform for self-hosting apps and running a customizable, privacy-first AI assistant you can actually take apart and extend."
   },
   {
-    "id": "talk-panel",
-    "title": "Panel: An Example Discussion",
-    "event": "Example Summit 2020",
-    "year": 2020,
-    "videoUrl": "https://vimeo.com/000000000",
-    "thumbnail": "/images/talks/placeholder.svg",
-    "description": "Replace with the real talk. Thumbnails live in public/images/talks/."
+    "id": "supercon-2024-agile-manufacturing",
+    "title": "The Secrets of Agile Manufacturing",
+    "event": "Hackaday Supercon 2024",
+    "year": 2024,
+    "videoUrl": "https://www.youtube.com/watch?v=qFbdnSWPl_8",
+    "thumbnail": "/images/talks/supercon-2024.jpg",
+    "description": "How the Ubo open-source home pod is designed, built, and manufactured — practical techniques for small-volume production and incremental builds that cut cost, add flexibility, and make mistakes less expensive, across both electronics and mechanical parts."
+  },
+  {
+    "id": "msr-fpga-verification-2011",
+    "title": "Automated FPGA Verification and Debugging",
+    "event": "Microsoft Research",
+    "year": 2011,
+    "videoUrl": "https://www.youtube.com/watch?v=9pMuFYzRO4k",
+    "thumbnail": "/images/talks/fpga-verification.jpg",
+    "description": "A framework that automates the tedious parts of FPGA debugging and verification — mining assertions from simulation or hardware traces, generating Verilog assertion-checking engines, auto-inserting signal probes, and varying clock frequency on the fly, all while preserving the original placement. From my work as a Microsoft Research intern."
   }
 ]
