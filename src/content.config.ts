@@ -14,6 +14,8 @@ const projects = defineCollection({
     tags: z.array(z.string()).default([]),
     // One or more images shown in a carousel. First image is the cover.
     images: z.array(z.string()).default([]),
+    // Optional video (e.g. YouTube) appended as an extra carousel slide.
+    video: z.string().url().optional(),
     links: z
       .object({
         live: z.string().url().optional(),

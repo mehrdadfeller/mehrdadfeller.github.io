@@ -11,19 +11,41 @@ const { project, index } = Astro.props;
 const { data } = project;
 const { Content } = await render(project);
 const reversed = index % 2 === 1;
-const images = data.images;
-const multiple = images.length > 1;
+
+function toYoutubeEmbed(url: string) {
+  const u = new URL(url);
+  const id = u.hostname.includes('youtu.be') ? u.pathname.slice(1) : u.searchParams.get('v');
+  return id ? `https://www.youtube.com/embed/${id}` : url;
+}
+
+const media = [
+  ...data.images.map((src) => ({ type: 'image' as const, src })),
+  ...(data.video ? [{ type: 'video' as const, src: toYoutubeEmbed(data.video) }] : []),
+];
+const multiple = media.length > 1;
 ---
 
 <article class:list={['project', { 'project--reversed': reversed }]}>
-  {images.length > 0 && (
+  {media.length > 0 && (
     <div class="project__media">
       <div class="carousel" data-carousel>
         <div class="carousel__viewport">
           <ul class="carousel__track">
-            {images.map((src, i) => (
+            {media.map((item, i) => (
               <li class="carousel__slide" aria-hidden={i === 0 ? 'false' : 'true'}>
-                <img src={src} alt={`${data.title} — image ${i + 1}`} loading="lazy" />
+                {item.type === 'image' ? (
+                  <img src={item.src} alt={`${data.title} — image ${i + 1}`} loading="lazy" />
+                ) : (
+                  <div class="carousel__video">
+                    <iframe
+                      src={item.src}
+                      title={`${data.title} — video`}
+                      loading="lazy"
+                      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen
+                    ></iframe>
+                  </div>
+                )}
               </li>
             ))}
           </ul>
@@ -31,18 +53,18 @@ const multiple = images.length > 1;
 
         {multiple && (
           <>
-            <button class="carousel__btn carousel__btn--prev" data-dir="-1" aria-label="Previous image">
+            <button class="carousel__btn carousel__btn--prev" data-dir="-1" aria-label="Previous slide">
               <span aria-hidden="true">‹</span>
             </button>
-            <button class="carousel__btn carousel__btn--next" data-dir="1" aria-label="Next image">
+            <button class="carousel__btn carousel__btn--next" data-dir="1" aria-label="Next slide">
               <span aria-hidden="true">›</span>
             </button>
             <div class="carousel__dots">
-              {images.map((_, i) => (
+              {media.map((_, i) => (
                 <button
                   class="carousel__dot"
                   data-index={i}
-                  aria-label={`Go to image ${i + 1}`}
+                  aria-label={`Go to slide ${i + 1}`}
                   aria-selected={i === 0 ? 'true' : 'false'}
                 ></button>
               ))}
@@ -143,6 +165,18 @@ const multiple = images.length > 1;
     aspect-ratio: 3 / 2;
     object-fit: cover;
     display: block;
+  }
+  .carousel__video {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 3 / 2;
+  }
+  .carousel__video iframe {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
   }
   .carousel__btn {
     position: absolute;

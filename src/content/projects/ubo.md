@@ -1,13 +1,17 @@
 ---
 title: "Ubo"
-role: "Founder & Lead Engineer"
-period: "2021 — Present"
-summary: "An open-source, modular smart assistant pod — privacy-first hardware and software built on a Raspberry Pi platform."
+role: "Founder"
+period: "2022 — Present"
+summary: "A privacy-first agentic AI assistant pod you can modify, extend, and manage from anywhere with a wide range of clients."
 tags: ["Hardware", "Open Source", "Embedded Linux", "Python"]
 images:
-  - "/images/projects/ubo-1.svg"
-  - "/images/projects/ubo-2.svg"
-  - "/images/projects/ubo-3.svg"
+  - "/images/projects/ubo/rotating-pod.gif"
+  - "/images/projects/ubo/ubo-on-shelf.jpg"
+  - "/images/projects/ubo/pi5-top-detached.jpg"
+  - "/images/projects/ubo/ubo-ios-app.jpg"
+  - "/images/projects/ubo/ubo-apple-watch.jpg"
+  - "/images/projects/ubo/web-ui.jpg"
+  - "/images/projects/ubo/gui.jpg"
 links:
   live: "https://getubo.com"
   repo: "https://github.com/ubopod"
@@ -15,11 +19,4 @@ order: 1
 featured: true
 ---
 
-Ubo is a compact, hackable assistant pod designed around privacy and openness.
-The platform combines custom PCBs, a Raspberry Pi compute module, and a Python
-application stack with a Redux-style state architecture.
-
-Replace this paragraph with the real story: the problem you set out to solve,
-the key technical decisions (hardware design, the app framework, the GUI layer),
-and the outcomes that matter most. Drop screenshots and product photos into
-`public/images/projects/` and reference them from the frontmatter or inline here.
+I founded Ubo, an open-source framework for building agentic AI assistants for developers and tech enthusiasts. It combines software and hardware co-design through a hyper-modular architecture, a reactive core, and a universal interface that runs everywhere — built-in GUI, web, iPhone, watchOS, macOS, Android, ESP32, and more. Funded on Kickstarter by hundreds of backers, it was well received by the developer community and covered by notable publications.

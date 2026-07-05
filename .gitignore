@@ -11,3 +11,6 @@ npm-debug.log*
 .env.production
 # macOS
 .DS_Store
+
+# raw/uncompressed source photos (processed copies live in public/images)
+/images/
